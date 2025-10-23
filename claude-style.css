@@ -1,0 +1,299 @@
+/*
+Theme Name: Skate Spots
+Theme URI: https://example.com/skate-spots-theme
+Description: A custom WordPress theme for showcasing skate spots
+Version: 1.0.0
+Author: Your Name
+Author URI: https://example.com
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: skate-spots
+Tags: skateboarding, custom, responsive, modern
+*/
+
+/* ===================================
+   CSS RESET & BASE STYLES
+   =================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f5f5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #0073aa;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #005177;
+}
+
+/* ===================================
+   LAYOUT
+   =================================== */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===================================
+   HEADER
+   =================================== */
+
+.site-header {
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+.site-title a {
+    color: #333;
+}
+
+/* Navigation */
+.main-navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.main-navigation a {
+    color: #666;
+    font-weight: 500;
+}
+
+.main-navigation a:hover {
+    color: #0073aa;
+}
+
+/* ===================================
+   MAIN CONTENT
+   =================================== */
+
+.site-content {
+    padding: 40px 0;
+    min-height: 60vh;
+}
+
+/* Posts Grid */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.post-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 20px;
+}
+
+.post-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.post-title a {
+    color: #333;
+}
+
+.post-excerpt {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Single Post */
+.single-post .post-header {
+    margin-bottom: 30px;
+}
+
+.single-post .entry-title {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.entry-meta {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.entry-content {
+    line-height: 1.8;
+    color: #444;
+}
+
+.entry-content p {
+    margin-bottom: 20px;
+}
+
+.entry-content h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* ===================================
+   SIDEBAR
+   =================================== */
+
+.sidebar {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.widget {
+    margin-bottom: 30px;
+}
+
+.widget-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0073aa;
+}
+
+.widget ul {
+    list-style: none;
+}
+
+.widget li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+
+.site-footer {
+    background: #333;
+    color: #fff;
+    padding: 40px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content p {
+    color: #999;
+    font-size: 14px;
+}
+
+/* ===================================
+   BUTTONS
+   =================================== */
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #0073aa;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #005177;
+    color: #fff;
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .main-navigation ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .single-post .entry-title {
+        font-size: 28px;
+    }
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
