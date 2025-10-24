@@ -18,7 +18,7 @@
             <?php the_custom_logo(); ?>
                 <h2 class="site-title">
                     <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                        <?php bloginfo('name'); ?><span class="byline"><?php echo $description; ?></span>
+                        <?php bloginfo('name'); ?><span class="byline"><?php //echo $description; ?></span>
                     </a>
                 </h2>
         <?php else : ?>
