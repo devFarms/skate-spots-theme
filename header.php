@@ -36,6 +36,13 @@
         <?php endif; ?>
     </div>
 
+    <!-- Mobile Menu Toggle Button -->
+    <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+
     <nav id="site-navigation" class="main-navigation">
         <?php
         wp_nav_menu(array(
@@ -47,3 +54,34 @@
     </nav>
 
 </header>
+
+<script>
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navigation = document.querySelector('.main-navigation');
+    
+    if (menuToggle && navigation) {
+        menuToggle.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            this.setAttribute('aria-expanded', !isExpanded);
+            this.classList.toggle('active');
+            navigation.classList.toggle('mobile-menu-open');
+            document.body.classList.toggle('menu-open');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInside = navigation.contains(event.target) || menuToggle.contains(event.target);
+            
+            if (!isClickInside && navigation.classList.contains('mobile-menu-open')) {
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.classList.remove('active');
+                navigation.classList.remove('mobile-menu-open');
+                document.body.classList.remove('menu-open');
+            }
+        });
+    }
+});
+</script>
