@@ -3,7 +3,7 @@
             <div class="footer-content">
                 <div class="footer-columns">
                     <div class="footer-column-1">
-                        <img src="wp-content/themes/skate-spots-theme/assets/images/brnb_white_wheel.png" class="white-wheel">
+                        <img src="/wp-content/themes/skate-spots-theme/assets/images/brnb_white_wheel.png" class="white-wheel">
                     </div>
                     <div class="footer-column-2">
                         <?php if (current_user_can('manage_options') && has_nav_menu('footer')) : ?>

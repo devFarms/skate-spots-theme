@@ -16,19 +16,21 @@ get_header(); ?>
     <?php endwhile; ?>
 
     <div <?php post_class('maps-content'); ?>>
-        
+
         <div class="entry-content">
             <?php echo do_shortcode('[skate_spots_map]'); ?>
         </div>
         
-    </div> 
+    </div>
+<section id="front-page_skate-movies">
     <div <?php post_class('maps-content'); ?>>
         
         <div class="entry-content">
             <?php echo do_shortcode('[skate_movies_list]'); ?>
         </div>
         
-    </div> 
+    </div>
+</section> 
     <div <?php post_class('maps-content'); ?>>
         
         <div class="entry-content front-page-title">

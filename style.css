@@ -16,7 +16,7 @@ Tags: skateboarding, custom, responsive, modern
    =================================== */
 
 
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 * {
@@ -26,7 +26,8 @@ Tags: skateboarding, custom, responsive, modern
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;*/
+    font-family: "Roboto", sans-serif;
     line-height: 1.6;
     color: #333;
     background: #f5f5f5;
@@ -57,11 +58,9 @@ header {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    margin: 0 0 -30px 0;
-    padding: 10px 30px;
 }
 
-header a {
+header .main-navigation a {
     color: black;
     background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), rgba(221, 139, 184, 0.3) calc(50% - 9px), rgba(221, 139, 184, 0.5) 100%);
     transition: background-position 120ms 
@@ -71,8 +70,8 @@ header a {
     background-position: 0px 0px;
 }
 
-header .custom-logo-link {
-    background-image: none;
+header .site-title a {
+    color: black;
 }
 
 header a:hover {
@@ -91,7 +90,7 @@ header a:hover {
 
 .site-branding img {
     margin: 0 20px 0 0;
-    width: 60px;
+    width: 90px;
 }
 
 .site-branding h2 {
@@ -115,15 +114,19 @@ header a:hover {
 }
 
 h1.front-page-title {
+    border-bottom: 10px solid black;
     display: block;
     font-family: "Permanent Marker", cursive;
+    font-family: "Major Mono Display", monospace;
     font-size: 5rem;
+    letter-spacing: -5px;
+    margin-bottom: -6px;
     text-align: center !important;
     width: 100%;
-    margin-top: -50px;
-    margin-right: auto;
-    margin-bottom: 0;
-    margin-left: auto;
+}
+
+#front-page_skate-movies {
+    background-color: #a5a5a5;
 }
 
 .front-page-title > .skate-scenes-list-container > .skate-scenes-map-wrapper > h2,
@@ -169,4 +172,15 @@ footer, footer a {
 
 .footer-column-1 .white-wheel {
     width: 200px;
+}
+
+
+/* Overrides */
+.skate-spots-map-container,
+.skate-scenes-map-wrapper {
+    margin-bottom: 0;
+}
+
+.movie-item {
+    border: 1px solid black;
 }
