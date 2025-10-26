@@ -8,6 +8,7 @@
                     <div class="footer-column-2">
                         <?php if (current_user_can('manage_options') && has_nav_menu('footer')) : ?>
                     <?php if (has_nav_menu('footer')) : ?>
+                        <h2>Add Something!</h2>
                     <nav class="footer-navigation">
                         <?php
                         wp_nav_menu(array(
@@ -20,7 +21,14 @@
                 <?php endif; ?>
                 <?php endif; ?>
                     </div>
-                    <div class="footer-column-3">Column 3</div>
+                    <div class="footer-column-3">
+                        <h2>Be Social</h2>
+                        <ul class="social-media-icons">
+                            <li><i class="fa-brands fa-instagram"></i></li>
+                            <li><i class="fa-brands fa-tiktok"></i></li>
+                            <li><i class="fa-brands fa-youtube"></i></li>
+                        </ul>
+                    </div>
                 
                 
             </div>
