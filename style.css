@@ -346,6 +346,19 @@ footer, footer a {
     width: 200px;
 }
 
+.footer-column-2 h2, .footer-column-3 h2 {
+    font-size: 200%;
+}
+
+.social-media-icons {
+    display: flex;
+}
+.social-media-icons li, #footer-menu li {
+    font-size: 150%;
+    list-style: none;
+    padding: 10px 20px 0 0;
+}
+
 /* Mobile footer adjustments */
 @media (max-width: 768px) {
     footer {
