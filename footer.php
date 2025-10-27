@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="footer-info">
-            <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.</p>
+            <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved. Go skate!</p>
         </div>
     </footer>
 
