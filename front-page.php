@@ -37,7 +37,17 @@ get_header(); ?>
     <?php echo do_shortcode('[skate_scenes_list]'); ?>
         </div>
         
-    </div>    
+    </div> 
+    
+<section id="front-page_skate-movies">
+    <div <?php post_class('maps-content'); ?>>
+        
+        <div class="entry-content">
+            <?php echo do_shortcode('[skate_skaters_list]'); ?>
+        </div>
+        
+    </div>
+</section> 
     
 </div>
 
